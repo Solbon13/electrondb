@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <audio id="audio">
+        <source src="../audio/haker-adminy.mp3" type="audio/mpeg">
+        Тег audio не поддерживается вашим браузером. 
+      </audio>
+    <button onclick="soundClick()">музыка</button>
+    <div id="main">
+        <button class="btn" onclick="gamesClick()">Старт</button>
+        <button class="btn" onclick="setupClick()">Настройки</button>
+        <button class="btn" onclick="closeClick()">Выход</button>
+    </div>
+    
+    <div id="level"
+    >
+        <button class="btn" onclick="wordsClick()">Слова</button>
+        <button class="btn" onclick="lettersClick()">Вставить пропущенные буквы</button>
+        <button class="btn" onclick="endingsClick()">Вставить пропущенные окончания</button>
+        <button class="btn" onclick="mainClick()">Назад</button>
+    </div>
+
+    <div id="games"
+    >
+        <div id="info">
+            <img src="" alt="монет" srcset="">
+            <span id = "coins">coins</span>
+            <img src="" alt="очков" srcset="">
+            <span id = "rating">rating</span>
+            <img src="" alt="подсказки" srcset="">
+            <span id = "hints">hints</span>
+            <button class="btn-small" onclick="mainClick()">Назад</button>
+            <button class="btn-small" onclick="mainClick()">Назад</button>
+        </div>
+        <div id ="fieldGames">
+            <div id = "fieldSecret">
+                <input type="text" class="secretSymbol">
+                secret
+            </div>
+            <div id = "fieldQuestionKey">
+                <div id = "fieldQuestion">
+                    Question
+                </div>
+                <div id="key">
+                    key
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="setup"
+    >
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button class="btn-small">добавить</button>
+        <button class="btn-small" onclick="mainClick()">Назад</button>        
+    </div>
+
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+    <script src="level.js"></script>
+</body>
+</html>

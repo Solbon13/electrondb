@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <audio id="audio">
+        <source src="../audio/haker-adminy.mp3" type="audio/mpeg">
+        Тег audio не поддерживается вашим браузером.
+    </audio>
+    <div id="main">
+        <button class="btn" onclick="gamesClick()">Старт</button>
+        <button class="btn" onclick="setupClick()">Настройки</button>
+        <button class="btn" onclick="closeClick()">Выход</button>
+        <button onclick="soundClick()">музыка</button>
+    </div>
+
+    <div id="level" style="display: none;">
+        <button class="btn" onclick="wordsClick()">Слова</button>
+        <button class="btn" onclick="lettersClick()">Вставить пропущенные буквы</button>
+        <button class="btn" onclick="endingsClick()">Вставить пропущенные окончания</button>
+        <button class="btn" onclick="mainClick()">Назад</button>
+    </div>
+
+    <div id="games" style="display: none;">
+        <div id="info">
+            <img src="" alt="монет" srcset="">
+            <span id="coins">coins</span>
+            <img src="" alt="очков" srcset="">
+            <span id="rating">rating</span>
+            <img src="" alt="подсказки" srcset="">
+            <span id="hints">hints</span>
+            <button class="btn-small" onclick="skipClick()">Пропустить</button>
+        </div>
+        <div id="fieldGames">
+            <div id="fieldSecret">
+                <input type="text" class="secretSymbol">
+                secret
+            </div>
+            <div id="fieldQuestionKey">
+                <div id="fieldQuestion">
+                    Question
+                </div>
+                <div id="fieldKey">
+                    key
+                </div>
+            </div>
+            <div id="fieldQuestionESC" style="display: none;">
+                <div id="fieldQuestionESC">
+                    EXIT
+                </div>
+                <div id="fieldKeyESC">
+                    <button class="btn-small" onclick="proceedClick()">Продолжить</button>
+                    <button class="btn-small" onclick="mainClick()">Главное меню</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="setup" style="display: none;">
+        <input id="newLevel" type="number" value="1" step="1" min="1" max="3" placeholder="Уровень"></textarea>
+        <textarea name="" id="newQuestion" cols="30" rows="5" placeholder="Вопрос"></textarea>
+        <textarea name="" id="newAnswer" cols="30" rows="5" placeholder="Правильный ответ"></textarea>
+        <textarea name="" id="newSolutionOption" cols="30" rows="5" placeholder="Ключ ответа"></textarea>
+        <button class="btn-small" onclick="addClick()">добавить</button>
+        <button class="btn-small" onclick="mainClick()">Назад</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+    <script src="route.js"></script>
+    <script src="games.js"></script>
+    <script src="level.js"></script>
+    <script src="setup.js"></script>
+</body>
+
+</html>
